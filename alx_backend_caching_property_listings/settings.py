@@ -85,7 +85,14 @@ SECRET_KEY=env('SECRET_KEY')
 DEBUG=env.bool('DEBUG', default=False)
 
 DATABASES = {
-    'default': env.db()
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'alx_backend_caching_property_listings',        
+        'USER': 'postgres',          
+        'PASSWORD': 'yourpassword',  
+        'HOST': 'localhost',         
+        'PORT': '5432',              
+    }
 }
 
 
